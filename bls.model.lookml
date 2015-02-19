@@ -2,8 +2,6 @@
 
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards
-
-
   
 - explore: consumer_price_index_cu_series
   label: "Consumer Price Index (CU) Series"

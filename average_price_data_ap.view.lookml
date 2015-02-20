@@ -19,9 +19,14 @@
     # hidden: true
     sql: ${TABLE}.series_id
     type: string
+    
+  - dimension_group: month
+    sql: (${year} || '-' || substr(${average_price_data_ap_period.period}, 2) || '-01')::date
+    type: time
+    timeframes: [month]
 
-  - dimension: value
-    type: number
+  - measure: value
+    type: average
     sql: ${TABLE}.value
     format: "%.2f"
 

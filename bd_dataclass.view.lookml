@@ -4,6 +4,7 @@
 
   - dimension: dataclass_code
     sql: ${TABLE}.dataclass_code
+    primary_key: true
 
   - dimension: dataclass_name
     sql: ${TABLE}.dataclass_name

@@ -82,4 +82,28 @@
   label: "Average Price Data (AP) Series"
   
 #-------------------------------------------------------------------------------
+
+- explore: bd
+  label: "Business Employment Dynamics (BD)"
+  joins:
+    - join: bd_series
+      foreign_key: series_id
+      type: inner
+    - join: bd_county
+      foreign_key: bd_series.county_code
+      type: inner
+    - join: bd_dataclass
+      foreign_key: bd_series.dataclass_code
+      type: inner
+    - join: bd_dataelement
+      foreign_key: bd_series.dataelement_code
+      type: inner
+    - join: bd_footnote
+      foreign_key: bd_series.footnote_codes
+    - join: bd_industry
+      foreign_key: bd_series.industry_code
+      type: inner
+    - join: bd_periodicity
+      foreign_key: bd_series.periodicity_code
+      type: inner
     

@@ -12,9 +12,9 @@
     # hidden: true
     sql: ${TABLE}.series_id
 
-  - dimension: value
-    type: number
-    sql: ${TABLE}.value
+  - dimension: time_period
+    type: string
+    sql: ${TABLE}.year || '-' || ${TABLE}.period
 
   - dimension: year
     sql: ${TABLE}.year
@@ -23,3 +23,6 @@
     type: count
     drill_fields: [series.series_id]
 
+  - measure: value
+    type: average
+    sql: ${TABLE}.value

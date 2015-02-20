@@ -5,6 +5,7 @@
   - dimension: dataelement_code
     type: int
     sql: ${TABLE}.dataelement_code
+    primary_key: true
 
   - dimension: dataelement_name
     sql: ${TABLE}.dataelement_name

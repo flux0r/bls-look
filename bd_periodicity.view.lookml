@@ -4,6 +4,7 @@
 
   - dimension: periodicity_code
     sql: ${TABLE}.periodicity_code
+    primary_key: true
 
   - dimension: periodicity_name
     sql: ${TABLE}.periodicity_name

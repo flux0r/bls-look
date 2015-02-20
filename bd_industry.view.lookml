@@ -8,6 +8,7 @@
 
   - dimension: industry_code
     sql: ${TABLE}.industry_code
+    primary_key: true
 
   - dimension: industry_name
     sql: ${TABLE}.industry_name

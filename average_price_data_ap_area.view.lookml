@@ -1,5 +1,5 @@
-- view: consumer_price_index_cu_area
-  sql_table_name: cu.area
+- view: average_price_data_ap_area
+  sql_table_name: ap.area
   fields:
 
   - dimension: id
@@ -14,18 +14,6 @@
   - dimension: area_name
     sql: ${TABLE}.area_name
     type: string
-
-  - dimension: display_level
-    type: int
-    sql: ${TABLE}.display_level
-
-  - dimension: selectable
-    type: yesno
-    sql: ${TABLE}.selectable
-
-  - dimension: sort_sequence
-    type: int
-    sql: ${TABLE}.sort_sequence
 
   - measure: count
     type: count

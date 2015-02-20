@@ -2,6 +2,8 @@
 
 - include: "*.view.lookml"       # include all the views
 - include: "*.dashboard.lookml"  # include all the dashboards
+
+#-------------------------------------------------------------------------------
   
 - explore: consumer_price_index_cu_series
   label: "Consumer Price Index (CU) Series"
@@ -46,3 +48,38 @@
   
 - explore: consumer_price_index_cu_periodicity
   label: "Consumer Price Index (CU) Periodicity"
+  
+#-------------------------------------------------------------------------------
+
+- explore: average_price_data_ap
+  label: "Average Price Data (AP)"
+  joins:
+    - join: average_price_data_ap_series
+      sql_on: ${average_price_data_ap.series_id} = ${average_price_data_ap_series.series_id}
+      type: inner
+    - join: average_price_data_ap_area
+      sql_on: ${average_price_data_ap_series.area_code = ${average_price_data_ap_area.area_code}
+      type: inner
+    - join: average_price_data_ap_item
+      sql_on: ${average_price_data_ap_series.item_code} = ${average_price_data_ap_item.item_code}
+      type: inner
+    - join: average_price_data_ap_period
+      sql_on: ${average_price_data_ap.period} = ${average_price_data_ap_period.period}
+      
+- explore: average_price_data_area
+  label: "Average Price Data (AP) Area"
+  
+- explore: average_price_data_footnote
+  label: "Average Price Data (AP) Footnote"
+  
+- explore: average_price_data_item
+  label: "Average Price Data (AP) Item"
+  
+- explore: average_price_data_period
+  label: "Average Price Data (AP) Period"
+  
+- explore: average_price_data_ap_series
+  label: "Average Price Data (AP) Series"
+  
+#-------------------------------------------------------------------------------
+    

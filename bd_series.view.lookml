@@ -1,4 +1,4 @@
-- view: series
+- view: bd_series
   sql_table_name: bd.series
   fields:
 

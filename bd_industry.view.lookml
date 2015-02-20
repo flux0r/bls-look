@@ -1,16 +1,16 @@
-- view: dataclass
-  sql_table_name: bd.dataclass
+- view: bd_industry
+  sql_table_name: bd.industry
   fields:
-
-  - dimension: dataclass_code
-    sql: ${TABLE}.dataclass_code
-
-  - dimension: dataclass_name
-    sql: ${TABLE}.dataclass_name
 
   - dimension: display_level
     type: int
     sql: ${TABLE}.display_level
+
+  - dimension: industry_code
+    sql: ${TABLE}.industry_code
+
+  - dimension: industry_name
+    sql: ${TABLE}.industry_name
 
   - dimension: selectable
     type: yesno
@@ -22,5 +22,5 @@
 
   - measure: count
     type: count
-    drill_fields: [dataclass_name]
+    drill_fields: [industry_name]
 

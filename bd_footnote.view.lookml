@@ -1,4 +1,4 @@
-- view: footnote
+- view: bd_footnote
   sql_table_name: bd.footnote
   fields:
 

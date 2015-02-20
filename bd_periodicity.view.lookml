@@ -1,4 +1,4 @@
-- view: periodicity
+- view: bd_periodicity
   sql_table_name: bd.periodicity
   fields:
 

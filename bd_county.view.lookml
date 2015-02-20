@@ -1,4 +1,4 @@
-- view: county
+- view: bd_county
   sql_table_name: bd.county
   fields:
 

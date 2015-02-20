@@ -1,4 +1,4 @@
-- view: dataelement
+- view: bd_dataelement
   sql_table_name: bd.dataelement
   fields:
 

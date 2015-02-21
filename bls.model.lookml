@@ -106,4 +106,25 @@
     - join: bd_periodicity
       foreign_key: bd_series.periodicity_code
       type: inner
+    - join: bd_msa
+      foreign_key: bd_series.msa_code
+      type: inner
+    - join: bd_ownership
+      foreign_key: bd_series.ownership_code
+      type: inner
+    - join: bd_ratelevel
+      foreign_key: bd_series.ratelevel_code
+      type: inner
+    - join: bd_seasonal
+      foreign_key: bd_series.seasonal
+      type: inner
+    - join: bd_sizeclass
+      foreign_key: bd_series.sizeclass_code
+      type: inner
+    - join: bd_state
+      foreign_key: bd_series.state_code
+      type: inner
+    - join: bd_unitanalysis
+      foreign_key: bd_series.unitanalysis_code
+      type: inner
     
